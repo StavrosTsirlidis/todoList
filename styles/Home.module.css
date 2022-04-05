@@ -4,11 +4,11 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -39,6 +39,13 @@
   text-decoration: underline;
 }
 
+.titleContainer {
+  width: 100%;
+  max-width: 400px;
+  border-bottom: 2px solid rgb(172, 105, 172);
+  display: flex;
+  justify-content: left;
+}
 .title {
   margin: 0;
   line-height: 1.15;
@@ -107,6 +114,93 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.todoContainer{
+  width:100%;
+  max-width: 400px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  border: 2px solid rgb(214, 214, 214);
+  border-radius: 10px;
+  padding:10px;
+}
+
+.todoTitle{
+  font-size: 15px;
+  margin-right: 10px;
+  width:60%;  
+  padding-left:3px;
+}
+
+.buttonContainer{
+  display:flex;
+  grid-gap:10px;
+  width:40%;  
+}
+
+.deleteButton{
+  border:2px solid rgb(51, 51, 51);
+  border-radius:5px;
+  width: 80px;
+  padding:5px;
+  background-color: rgb(235, 160, 160);
+  cursor: pointer;
+}
+
+.done{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(73, 165, 73);
+  font-size: 15px;
+  width:50%;  
+}
+
+.doneButton{
+  border:2px solid rgb(51, 51, 51);
+  border-radius:5px;
+  width: 100px;
+  padding:5px;
+  background-color:rgb(144, 221, 144);
+  width:50%;
+  cursor: pointer;
+}
+
+.todoList{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  max-width: 400px;
+ }
+
+.addContainer{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width:100%;
+ max-width: 400px;
+}
+
+.addButton{
+  border:2px solid rgb(51, 51, 51);
+  border-radius:5px;
+  width: 100px;
+  padding:5px;
+  width:40%;
+  background-color:rgb(192, 129, 178);
+  cursor: pointer;
+}
+
+.addInput{
+  border:2px solid rgb(51, 51, 51);
+  border-radius:5px;
+  width: 100px;
+  padding:5px;
+  width:60%;
+  margin-right: 10px;
+}
+
 
 @media (max-width: 600px) {
   .grid {
