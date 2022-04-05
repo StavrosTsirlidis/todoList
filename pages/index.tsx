@@ -40,6 +40,19 @@ const Home: NextPage = () => {
       .catch(e => { console.log(e.err); })
   }
 
+  const handleFilterDoneClick = () => {
+    const getAllDoneTodos = todo.filter(todoObject => todoObject.performed === true)
+    const getNotDoneTodos = todo.filter(todoObject => todoObject.performed !== true)
+    setTodo(getAllDoneTodos.concat(getNotDoneTodos));
+  }
+
+  const handleFilterNotDoneClick = () => {
+    const getAllDoneTodos = todo.filter(todoObject => todoObject.performed === true)
+    const getNotDoneTodos = todo.filter(todoObject => todoObject.performed !== true)
+    setTodo(getNotDoneTodos.concat(getAllDoneTodos));
+  }
+
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -47,6 +60,15 @@ const Home: NextPage = () => {
           <h1 className={styles.title}>
             Todo
           </h1>
+          <div className={styles.filterContainer} >
+            <div>Filter</div>
+            <div className={styles.filterVuttonContainer}>
+              <button className={styles.filterButton} onClick={() => handleFilterDoneClick()}>done</button>
+              <button className={styles.filterButton} onClick={() => handleFilterNotDoneClick()}>not done</button>
+            </div>
+
+          </div >
+
         </div>
 
         <div className={styles.todoList}>
