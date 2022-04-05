@@ -18,10 +18,10 @@ export const Todo: React.FC<Props> = ({ data, handleDeleteClick, handleSetDoneCl
                 <button className={styles.deleteButton} onClick={() => handleDeleteClick(id)}>
                     Delete
                     </button>
-                {performed !== false ? <div className={styles.done}>DONE</div> :
+                {performed !== false ? <div className={styles.done}> &#10003; </div> :
                     <button className={styles.doneButton} onClick={() => handleSetDoneClick(id, true)}>
                         Done
-                      </button>}
+                    </button>}
             </div>
         </div>
     )
