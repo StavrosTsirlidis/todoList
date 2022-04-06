@@ -60,15 +60,6 @@ const Home: NextPage = () => {
           <h1 className={styles.title}>
             Todo
           </h1>
-          <div className={styles.filterContainer} >
-            <div>Filter</div>
-            <div className={styles.filterVuttonContainer}>
-              <button className={styles.filterButton} onClick={() => handleFilterDoneClick()}>done</button>
-              <button className={styles.filterButton} onClick={() => handleFilterNotDoneClick()}>not done</button>
-            </div>
-
-          </div >
-
         </div>
 
         <div className={styles.todoList}>
@@ -89,6 +80,13 @@ const Home: NextPage = () => {
             Add
           </button>
         </div>
+        <div className={styles.filterContainer} >
+          <div>Filter</div>
+          <div className={styles.filterVuttonContainer}>
+            <button className={styles.filterButton} onClick={() => handleFilterDoneClick()}>done</button>
+            <button className={styles.filterButton} onClick={() => handleFilterNotDoneClick()}>not done</button>
+          </div>
+        </div >
       </main>
     </div >
   )
