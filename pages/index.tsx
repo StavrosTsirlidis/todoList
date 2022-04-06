@@ -67,15 +67,15 @@ const Home: NextPage = () => {
             return (
               <Todo
                 data={todoObject}
-                handleDeleteClick={(e) => handleDeleteClick(e)}
-                handleSetDoneClick={(e, i) => handleSetDoneClick(e, i)}
+                handleDeleteClick={(id) => handleDeleteClick(id)}
+                handleSetDoneClick={(performed, id) => handleSetDoneClick(performed, id)}
               />
             )
           })}
         </div>
 
         <div className={styles.addContainer}>
-          <input className={styles.addInput} type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="add new todo" />
+          <input className={styles.addInput} type="text" value={title} onChange={(text) => setTitle(text.target.value)} placeholder="add new todo" />
           <button className={styles.addButton} onClick={() => handleAddClick()}>
             Add
           </button>
